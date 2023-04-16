@@ -13,11 +13,11 @@ import {
 import { Platform } from 'aws-cdk-lib/aws-ecr-assets';
 
 const app = new App();
-const stack = new Stack(app, 'hit-counter-demo-02');
+const stack = new Stack(app, 'docker-demo');
 
 const environment = new Environment(stack, 'production');
 
-/** Define the hit counter service */
+/** Define the service */
 const serviceDescription = new ServiceDescription();
 
 // Add the container
@@ -40,8 +40,8 @@ serviceDescription.add(new Container({
 // Add a load balancer
 serviceDescription.add(new HttpLoadBalancerExtension());
 
-// Add the hit counter service to the production environment.
-new Service(stack, 'hit-counter-demo', {
+// Add the service to the production environment.
+new Service(stack, 'docker-demo', {
   environment: environment,
   serviceDescription: serviceDescription,
 });
