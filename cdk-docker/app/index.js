@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const PORT = 8080;
+const PORT = 80;
 
 app.get('/', function (_req, res) {
   res.send('Hello World!');
