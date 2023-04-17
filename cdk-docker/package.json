@@ -5,12 +5,12 @@
   "main": "index.js",
   "scripts": {
     "diff": "cdk diff --app='ts-node index.ts' || true",
-    "deploy": "cdk deploy --app='ts-node index.ts' || true"
+    "deploy": "cdk deploy --profile diego --app='ts-node index.ts' || true"
   },
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@aws-cdk-containers/ecs-service-extensions": "2.0.0-alpha.359",
+    "@aws-cdk-containers/ecs-service-extensions": "2.0.0-alpha.92",
     "aws-cdk": "2.33.0",
     "aws-cdk-lib": "2.33.0",
     "constructs": "10.0.5",

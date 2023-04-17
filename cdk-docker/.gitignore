@@ -9,6 +9,9 @@
 .env.production
 .env.production.local
 
+# cdk
+cdk.out
+
 # dependencies
 /node_modules
 /.pnp
