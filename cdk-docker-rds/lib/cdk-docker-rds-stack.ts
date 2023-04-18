@@ -36,7 +36,7 @@ export class CdkDockerRdsStack extends cdk.Stack {
     // Create a private RDS instance
     const database = new rds.DatabaseInstance(this, "MyDB", {
       engine: rds.DatabaseInstanceEngine.postgres({
-        version: rds.PostgresEngineVersion.VER_13_2
+        version: rds.PostgresEngineVersion.VER_13
       }),
       instanceType: ec2.InstanceType.of(ec2.InstanceClass.T2, ec2.InstanceSize.MICRO),
       credentials: rds.Credentials.fromUsername('myuser', {
